@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sarh Al Anaqa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#333;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+width:100%;
+background:white;
+box-shadow:0px 3px 15px rgba(0,0,0,0.08);
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+
+}
+
+.logoBox{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logoBox img{
+
+height:65px;
+
+}
+
+.brand{
+
+font-size:22px;
+font-weight:600;
+letter-spacing:2px;
+
+}
+
+nav ul{
+
+display:flex;
+gap:30px;
+list-style:none;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:#333;
+font-weight:500;
+
+}
+
+nav ul li a:hover{
+
+color:#c8a96a;
+
+}
+
+.langBtn{
+
+background:#c8a96a;
+color:white;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+position:relative;
+overflow:hidden;
+
+background:url("shop.jpeg") center/cover no-repeat;
+
+}
+
+/* dark overlay */
+
+.hero::after{
+
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+z-index:1;
+
+}
+
+/* Cloth wave */
+
+.wave{
+
+position:absolute;
+width:200%;
+height:200%;
+background:linear-gradient(120deg,#c8a96a,#f2e6cf,#c8a96a);
+animation:waveMove 20s linear infinite;
+opacity:.35;
+
+}
+
+.wave2{
+
+animation-direction:reverse;
+opacity:.2;
+
+}
+
+@keyframes waveMove{
+
+0%{
+transform:translateX(-20%) translateY(-10%) rotate(0deg);
+}
+
+100%{
+transform:translateX(-10%) translateY(-20%) rotate(360deg);
+}
+
+}
+
+.heroContent{
+
+position:relative;
+z-index:5;
+
+}
+
+.hero h1{
+
+font-size:60px;
+letter-spacing:6px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+margin-bottom:30px;
+
+}
+
+.btn{
+
+padding:14px 35px;
+background:#c8a96a;
+color:white;
+border-radius:40px;
+text-decoration:none;
+
+}
+
+.btn:hover{
+
+background:#a88945;
+
+}
+
+/* SECTION */
+
+.section{
+
+padding:80px 10%;
+text-align:center;
+
+}
+
+.section h2{
+
+font-size:36px;
+margin-bottom:20px;
+
+}
+
+.section p{
+
+max-width:800px;
+margin:auto;
+line-height:1.8;
+
+}
+
+/* GALLERY */
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+
+}
+
+.gallery img{
+
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* CONTACT */
+
+.contactBox{
+
+background:#faf7f0;
+padding:40px;
+border-radius:15px;
+margin-top:30px;
+
+}
+
+.contactBox p{
+
+font-size:18px;
+margin:10px;
+
+}
+
+.whatsapp{
+
+display:inline-block;
+margin-top:15px;
+padding:14px 25px;
+background:#25D366;
+color:white;
+border-radius:30px;
+text-decoration:none;
+
+}
+
+/* MAP */
+
+iframe{
+
+width:100%;
+height:350px;
+border-radius:15px;
+margin-top:30px;
+border:0;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+margin-top:50px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+
+<div class="logoBox">
+
+<img src="logo.jpeg">
+
+<div class="brand">Sarh Al Anaqa</div>
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="langBtn" onclick="toggleLang()">AR</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="wave"></div>
+<div class="wave wave2"></div>
+
+<div class="heroContent">
+
+<h1 id="title">Sarh Al Anaqa</h1>
+
+<p id="subtitle">
+
+Premium Fabrics • Elegant Designs • Perfect Stitching
+
+</p>
+
+<a href="#products" class="btn" id="btnText">
+
+View Collection
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<h2 id="aboutTitle">About Us</h2>
+
+<p id="aboutText">
+
+Sarh Al Anaqa offers premium fabrics, elegant colours and modern designs.
+
+Visit our shop and experience perfect stitching and high quality materials.
+
+</p>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+<h2 id="productTitle">Our Collection</h2>
+
+<div class="gallery">
+
+<img src="thobe1.PNG">
+<img src="thobe2.PNG">
+<img src="thobe3.jpeg">
+<img src="fabric1.PNG">
+<img src="fabric2.PNG">
+<img src="fabric3.PNG">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<h2 id="visitTitle">Visit Us</h2>
+
+<div class="contactBox">
+
+<p id="address">
+
+📍 Al Bawadi, Jeddah
+
+</p>
+
+<p>
+
+📞 +966 57 249 6146
+
+</p>
+
+<a href="https://maps.app.goo.gl/BZAW962F7va28G3S9" class="btn" id="direction">
+
+Get Directions
+
+</a>
+
+<a class="whatsapp" href="https://wa.me/966572496146">
+
+WhatsApp
+
+</a>
+
+
+
+</div>
+
+<iframe src="https://maps.google.com/maps?q=J529+6G,+Al+Bawadi,+Jeddah&t=&z=15&output=embed"></iframe>
+
+
+
+<footer>
+
+© 2026 Sarh Al Anaqa
+
+</footer>
+
+<script>
+
+let arabic=false;
+
+function toggleLang(){
+
+arabic=!arabic;
+
+if(arabic){
+
+document.documentElement.dir="rtl";
+
+title.innerHTML="صرح الأناقة";
+subtitle.innerHTML="أقمشة فاخرة • تصاميم أنيقة • خياطة متقنة";
+btnText.innerHTML="عرض المنتجات";
+
+aboutTitle.innerHTML="من نحن";
+
+aboutText.innerHTML="صرح الأناقة يقدم أقمشة فاخرة وتصاميم راقية وخياطة متقنة.";
+
+productTitle.innerHTML="منتجاتنا";
+
+visitTitle.innerHTML="زورونا";
+
+address.innerHTML="📍 حي البوادي - جدة";
+
+ownerTitle.innerHTML="المالك";
+
+ownerName.innerHTML="صاحب المحل";
+
+ownerText.innerHTML="خياط محترف بخبرة طويلة في الخياطة الفاخرة.";
+
+}
+
+else{
+
+location.reload();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -47,22 +47,21 @@ z-index:999;
 .logoBox{
 display:flex;
 align-items:center;
-gap:15px;
+gap:12px;
 }
 
 .logoBox img{
-height:65px;
+height:60px;
 }
 
 .brand{
 font-size:22px;
 font-weight:600;
-letter-spacing:2px;
 }
 
 nav ul{
 display:flex;
-gap:30px;
+gap:25px;
 list-style:none;
 }
 
@@ -85,13 +84,12 @@ cursor:pointer;
 white-space:nowrap;
 }
 
-/* MOBILE HEADER FIX */
+/* MOBILE PERFECT HEADER */
 
 @media (max-width:768px){
 
 nav{
-padding:10px 12px;
-flex-wrap:nowrap;
+padding:10px 10px;
 }
 
 .logoBox img{
@@ -99,25 +97,26 @@ height:45px;
 }
 
 .brand{
-font-size:16px;
+font-size:15px;
 }
 
 nav ul{
-display:none;
+gap:8px;
+font-size:12px;
 }
 
 .langBtn{
-padding:6px 12px;
-font-size:13px;
+padding:6px 10px;
+font-size:12px;
 }
 
 .hero h1{
-font-size:36px;
+font-size:34px;
 letter-spacing:3px;
 }
 
 .hero p{
-font-size:18px;
+font-size:17px;
 }
 
 }
@@ -288,6 +287,8 @@ margin-top:50px;
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 
 <div class="logoBox">
@@ -296,15 +297,20 @@ margin-top:50px;
 </div>
 
 <ul>
+
 <li><a href="#">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#products">Products</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 <div class="langBtn" onclick="toggleLang()">العربية</div>
 
 </nav>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -327,16 +333,24 @@ View Collection
 
 </section>
 
+
+<!-- ABOUT -->
+
 <section class="section" id="about">
 
 <h2 id="aboutTitle">About Us</h2>
 
 <p id="aboutText">
+
 Sarh Al Anaqa offers premium fabrics, elegant colours and modern designs.
 Visit our shop and experience perfect stitching and high quality materials.
+
 </p>
 
 </section>
+
+
+<!-- PRODUCTS -->
 
 <section class="section" id="products">
 
@@ -354,6 +368,9 @@ Visit our shop and experience perfect stitching and high quality materials.
 </div>
 
 </section>
+
+
+<!-- CONTACT -->
 
 <section class="section" id="contact">
 
@@ -381,9 +398,13 @@ WhatsApp
 
 <iframe src="https://maps.google.com/maps?q=J529+6G,+Al+Bawadi,+Jeddah&t=&z=15&output=embed"></iframe>
 
+
 <footer>
+
 © 2026 Sarh Al Anaqa
+
 </footer>
+
 
 <script>
 

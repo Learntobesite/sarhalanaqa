@@ -364,6 +364,9 @@ Visit our shop and experience perfect stitching and high quality materials.
 <img src="fabric1.png">
 <img src="fabric2.png">
 <img src="fabric3.png">
+<img src="fabric4.png">
+<img src="fabric5.png">
+<img src="fabric6.png">
 
 </div>
 
@@ -419,7 +422,9 @@ if(arabic){
 document.documentElement.dir="rtl";
 
 title.innerHTML="صرح الأناقة";
+
 subtitle.innerHTML="أقمشة فاخرة • تصاميم أنيقة • خياطة متقنة";
+
 btnText.innerHTML="عرض المنتجات";
 
 aboutTitle.innerHTML="من نحن";
@@ -432,11 +437,31 @@ visitTitle.innerHTML="زورونا";
 
 address.innerHTML="📍 حي البوادي - جدة";
 
+document.querySelector(".langBtn").innerHTML="English";
+
 }
 
 else{
 
-location.reload();
+document.documentElement.dir="ltr";
+
+title.innerHTML="Sarh Al Anaqa";
+
+subtitle.innerHTML="Premium Fabrics • Elegant Designs • Perfect Stitching";
+
+btnText.innerHTML="View Collection";
+
+aboutTitle.innerHTML="About Us";
+
+aboutText.innerHTML="Sarh Al Anaqa offers premium fabrics, elegant colours and modern designs. Visit our shop and experience perfect stitching and high quality materials.";
+
+productTitle.innerHTML="Our Collection";
+
+visitTitle.innerHTML="Visit Us";
+
+address.innerHTML="📍 Al Bawadi, Jeddah";
+
+document.querySelector(".langBtn").innerHTML="العربية";
 
 }
 
